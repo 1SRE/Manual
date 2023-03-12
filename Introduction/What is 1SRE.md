@@ -1,5 +1,4 @@
 # <center>1SRE</center>
-<hr>
 
 ## What is 1SRE?
 1SRE is a platform to learn about anything OS, networking, or other core operational related content for <b>free</b>; the objective of this application is to give college students, experienced professionals, and whomever else the necesseary tools to become a Site Reliability Engineer (or anything similar).
