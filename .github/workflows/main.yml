@@ -1,7 +1,6 @@
 on:
   schedule:
-    # - cron: '0 0 * * 0'
-    - cron: '* * * * *'
+    - cron: '0 0 * * 0'
 jobs:
   conversion:
     name: Converts repository to JSON file
