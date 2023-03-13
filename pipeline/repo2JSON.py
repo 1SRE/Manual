@@ -6,7 +6,7 @@ import os
 import json
 
 def getFolders(dir):
-    return [f.path for f in os.scandir(dir) if f.is_dir() and f.path != "../.git" and f.path != "../1SRE Scripts"]
+    return [f.path for f in os.scandir(dir) if f.is_dir() and f.path != "../.git" and f.path != "../pipeline"]
 
 def getFiles(dir):
     return [f.path for f in os.scandir(dir) if f.is_file()]
