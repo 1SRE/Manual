@@ -1,1 +1,32 @@
-echo "Hello"
+on:
+  schedule:
+    # - cron: '0 0 * * 0'
+    - cron: '* * * * *'
+jobs:
+  conversion:
+    name: Converts repository to JSON file
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      
+      - name: Setup Python
+        uses: actions/setup-python@v4
+
+      - name: Execute Python script
+        run: |
+          cd ./pipeline/
+          python3 repo2JSON.py
+      
+      - name: Commit files
+        run: |
+          git config user.email "automation@github.com"
+          git config user.name "automation"
+          git add -A
+          git commit -am 'json update'
+        
+      - name: Push changes
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: main
