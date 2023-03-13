@@ -1,5 +1,5 @@
 """
-The following code executes a method to combine everything found in the repository into a JSON file for the website to read from.
+The following code executes a couple functions to combine everything found in the repository into a single JSON file for the website to read from.
 """
 
 import os
