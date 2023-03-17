@@ -1,0 +1,9 @@
+- https://www.teamblind.com/post/Prep-links-for-SREProduction-engineer-bYMJikLv
+    - Linux Programming Interface
+    - Understanding the Linux Kernel (extremely out of date though)
+    - Illustrated Network
+    - Designing Data Intensive Applications
+    - Google SRE book
+    - Systems Performance by Brendan Gregg (his blog too)
+    - Linux Kernel Development
+    - Advanced Programming in the Unix Environment
