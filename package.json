@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "@contentful/rich-text-from-markdown": "^15.16.4"
+  }
+}
