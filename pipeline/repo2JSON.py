@@ -13,24 +13,24 @@ def getFiles(dir):
 
 def createSubContent(currDir, dirPath, jsonPointer):
     subFolders = getFolders(dirPath)
-    print(f"The subFolders of {currDir} include: {subFolders}")
     
     for folder in subFolders:
-        jsonPointer[folder.split(currDir+"/")[1]] = dict()
-        newJSONPointer = jsonPointer[folder.split(currDir+"/")[1]]
+
+        jsonPointer.append({"type": "folder", "title": folder.split(currDir+"/")[1], "content": list()})
+        newJSONPointer = jsonPointer[len(jsonPointer)-1]["content"]
         createSubContent(folder, folder, newJSONPointer)
 
     subFiles = getFiles(dirPath)
-    print(f"The subFiles of {currDir} include: {subFiles}")
     for subFile in subFiles:
         with open(subFile, "r") as text:
-            jsonPointer[subFile.split(currDir+"/")[1]] = text.read()
+            jsonPointer.append({"type": "article", "title": subFile.split(currDir+"/")[1].split(".md")[0], "text": text.read()})
     
-jsonObject = dict()
+jsonObject = list()
 
 for folder in getFolders("../"):
-    jsonObject[folder.split("/")[1]] = dict()
-    currJSONPointer = jsonObject[folder.split("/")[1]]
+    jsonObject.append({"type": "folder", "title": folder.split("/")[1], "content": list()})
+    
+    currJSONPointer = jsonObject[len(jsonObject)-1]["content"]
     createSubContent(folder.split("/")[1], folder, currJSONPointer)
 
 print("Done")
