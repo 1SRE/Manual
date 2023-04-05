@@ -35,7 +35,5 @@ for folder in getFolders("../"):
 
 print("Done")
 
-jsonObject = sorted(jsonObject, key=lambda key: key['title']) 
-
 with open("manual.json", "w") as outFile:
     json.dump(jsonObject, outFile)
