@@ -1,0 +1,14 @@
+# Information
+The documents found in this folder are related to the RHCSAv# exam, I do not intend on updating the content unless I retake the exam in teh future.
+
+# START
+mm/dd/yyyy
+
+# END
+mm/dd/yyyy
+
+# Thank you
+Huge thanks to my employer for purchasing the RHEL premier edition.
+
+Additionally, huge thanks to all of the online resources credited throughout the articles found in this folder.
+
